@@ -1,0 +1,9 @@
+This project aims to be a public re-implementation of [User-Guided Inverse 3D Modeling](http://www.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-103.html), a method for editing 3D shapes (such as a polygonal mesh) by letting the user impose the high-level structure that is most useful for editing.  It is essentially a collection of fast reverse-engineering modules that fit primitive structures (such as quadrics, sweeps, etc) to a 3D surface (while offering user control over exactly which structure are fit and where), and then in the same system lets the user use those fitted structures to edit the shape.
+
+Currently, this release has the first module implemented: A "stationary sweep" module that lets users fit helical structures and surfaces of revolution, and then edit those shapes by (for example) changing the cross-section.  More general forms of sweep editing, freeform surface editing, and quadric surface editing, and CSG-based reverse engineering will be released later.
+
+If you are a looking for lightweight libraries to help implement fast reverse engineering methods such as the ones used in this system, I have also made library versions of some of the fitting methods used in this system:
+Quadric fitting: https://code.google.com/p/type-specific-direct-quadric-fitting/
+Kinematic surface fitting (i.e., for fitting surfaces of revolution, helices, exponential snail shells, cones, etc): https://code.google.com/p/generalized-basis-independent-kinematic-surface-fitting/
+
+If you find this useful or interesting for some research purpose, please cite either the thesis, [User-Guided Inverse 3D Modeling](http://www.eecs.berkeley.edu/Pubs/TechRpts/2013/EECS-2013-103.html), or the paper [Interactive Inverse 3D Modeling](http://graphics.berkeley.edu/papers/Andrews-II3-2012-06/index.html).
